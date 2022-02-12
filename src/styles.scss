@@ -8,9 +8,6 @@ body {
     padding-top: 75px;
     overflow-y: auto;
 }
-.scrollable-element {
-    scrollbar-color: red yellow;
-  }
 ul {
     margin: 0;
     padding: 0;
@@ -21,7 +18,7 @@ a {
 }
 
 .mat-menu-panel {
-    background: var(var(--primary-color)) !important;
+    background: var(--primary-color) !important;
     button {
         color: #dedede;
     }

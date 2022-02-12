@@ -16,6 +16,7 @@ import { PostDetailsComponent } from './Components/post-details/post-details.com
 import {MatListModule} from '@angular/material/list';
 import { ListComponent } from './Components/list/list.component';
 import { RecommendationsComponent } from './Components/recommendations/recommendations.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RecommendationsComponent } from './Components/recommendations/recommend
     MatIconModule,
     MatMenuModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

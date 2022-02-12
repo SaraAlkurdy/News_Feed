@@ -140,3 +140,14 @@ header {
         }
     }
 }
+
+@media only screen and (max-width: 480px){
+    .logo {
+        form {
+            .input-group {
+                display: none;
+            }
+        }
+    }
+}
+
