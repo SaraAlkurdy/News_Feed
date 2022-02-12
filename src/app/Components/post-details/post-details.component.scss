@@ -1,0 +1,43 @@
+.post-comments {
+    form {
+        input {
+            background: transparent;
+            color:  var(--secondary-color);
+            border: 1px solid var(--tertiary-color);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-right: none;
+        }
+        span {
+            background: transparent;
+            color:  var(--secondary-color);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-left: none;
+            i {
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        li {
+            .comment-content {
+                padding: 16px;
+                border-radius: 0.8rem;
+                box-shadow: 0px 0px 0px black, 0 0 20px rgb(255 255 255 / 5%), 0 0 5px rgb(73 73 85);
+
+                h6 {
+                    color: var(--quaternary-color);
+                }
+                p {
+                    color:  var(--secondary-color);
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

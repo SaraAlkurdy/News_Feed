@@ -1,0 +1,80 @@
+.home {
+    .card {
+        border: 1px solid rgba(255,255,255,.125);
+        border-radius: 0.8rem;
+        margin: 0 auto 0.5rem;
+        background: var(--primary-color);
+
+        .user-data {
+            img {
+                margin-right: 10px;
+            }
+            h5 {
+                color: #dedede;
+            }
+        }
+        .post-actions {
+            color: #dedede;
+            
+        }
+        .home-post {
+            .home-post-image {
+                height: 25rem;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .home-post-content {
+                p {
+                    color: #dedede;
+                    height: 50px;
+                    overflow: hidden;
+                }
+                span {
+                    color: #919191;
+                    cursor: pointer;
+                    font-size: 15px;
+
+                }
+            }
+
+            .home-post-review {
+                color: var(--tertiary-color);
+                display: flex;
+                justify-content: space-between;
+                .likes {
+                    i {
+                        color: var(--quaternary-color);
+                    }
+                }
+            }
+
+            hr {
+                background: var(--tertiary-color);
+                margin: 0;
+            }
+
+            .home-post-actions {
+                display: flex;
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--tertiary-color);
+                    text-transform: capitalize;
+                    flex-grow: 1;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .show {
+        overflow: visible !important;
+        height: auto !important;
+      }
+}

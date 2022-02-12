@@ -1,0 +1,142 @@
+header {
+    nav {
+        background: var(--primary-color);
+        position: fixed;
+        width: 100%;
+        z-index: 9;
+        top: 0;
+        .navbar-toggler {
+            span {
+                color: var(--secondary-color);
+            }
+        }
+        .logo {
+            a {
+                background: var(--quaternary-color);
+                color: #fff;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.8rem;
+                font-weight: bolder;
+                text-decoration: none;
+            }
+            form {
+                margin-left: 10px;
+                .input-group {
+                    span {
+                        background: transparent;
+                        border: none;
+                        color: var(--secondary-color);
+                        box-shadow: 0px 0px 0px black, 0 0 20px rgb(255 255 255 / 5%), 0 0 5px #494955;
+                        clip-path: inset(-5px 0px -5px -5px);
+                    }
+                    input {
+                        background: transparent;
+                        border: none;
+                        color: var(--secondary-color);
+                        box-shadow: 1px 0px 0px 0px black, 0 0 20px rgb(255 255 255 / 5%), 0 0 5px #494955;
+                        clip-path: inset(-5px -5px -5px 0px);
+
+                        &:focus {
+                            box-shadow: none;
+                            border-color: var(--secondary-color);
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            li {
+                &.active {
+                    &::after {
+                        content: "";
+                        border-bottom: 2px solid var(--quaternary-color);
+                        width: 6.5%;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+                a {
+                    height: 40px;
+                    width: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(158, 158, 158);
+                    transition: 0.5s;
+                    i {
+                        text-align: center;
+                    }
+                    span {
+                        display: block;
+                        font-weight: 100;
+                        font-size: 13px;
+                    }
+                }
+
+                button {
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1rem;
+                    color: #050505;
+                    background: var(--secondary-color);
+                    border: none;
+                    outline: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+            &:last-child {
+                li {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+
+    .navbar-inverse {
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%),
+            0px 1px 10px 0px rgb(0 0 0 / 12%);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-collapse {
+        background: var(--quinary-color);
+        ul {
+            display: flex;
+            flex-direction: column;
+            &:first-child {
+                li {
+                    i {
+                        display: none;
+                    }
+                    &.active {
+                        a {
+                            color: var(--secondary-color);
+                        }
+                        &::after {
+                            content: "";
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}

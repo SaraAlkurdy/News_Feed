@@ -1,0 +1,39 @@
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between">
+      <div class="logo d-flex align-items-center">
+        <a href="#" class="mr-2"> S </a>
+        <form>
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><i class="far fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+          </div>
+        </form>
+
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="mx-auto">
+          <li [routerLinkActive]="['active']"> <a [routerLink]="['home']"> <i class="fas fa-home"></i><span>Home</span></a> </li>
+          <li> <a href="#"> <i class="fas fa-user-friends"></i><span>Groups</span> </a></li>
+          <li> <a href="#"> <i class="fas fa-tv"></i> <span>Watch</span> </a> </li>
+          <li> <a href="#"> <i class="fas fa-user-alt"></i><span>Friends</span> </a> </li>
+        </ul>
+
+        <ul>
+          <li> <button data-tooltip="Add"><i class="fas fa-ellipsis-v"></i></button> </li>
+          <li> <button data-tooltip="Message"><i class="fab fa-facebook-messenger"></i></button></li>
+          <li> <button data-tooltip="Notification"> <i class="fas fa-bell"></i></button></li>
+          <li> <button data-tooltip="Profile"><i class="fas fa-user-cog"></i></button> </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </nav>
+</header>

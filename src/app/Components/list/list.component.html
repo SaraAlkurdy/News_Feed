@@ -1,0 +1,16 @@
+<div class="list">
+    <mat-list>
+        <div mat-subheader>Recent</div>
+        <mat-list-item *ngFor="let folder of folders">
+            <i class="fas fa-hashtag"></i>
+          <div mat-line>{{folder.name}}</div>
+          <div mat-line> {{folder.updated | date}} </div>
+        </mat-list-item>
+        <div mat-subheader>Groups</div>
+        <mat-list-item *ngFor="let note of notes">
+            <i class="fas fa-users"></i>
+          <div mat-line>{{note.name}}</div>
+          <div mat-line> {{note.updated | date}} </div>
+        </mat-list-item>
+      </mat-list>
+</div>

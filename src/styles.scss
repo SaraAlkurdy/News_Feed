@@ -1,0 +1,39 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../src/assets/scss/variables.scss";
+@import "./assets/scss/post.scss";
+
+body {
+    background: var(--quinary-color);
+    height: 100%;
+    padding-top: 75px;
+    overflow-y: auto;
+}
+.scrollable-element {
+    scrollbar-color: red yellow;
+  }
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mat-menu-panel {
+    background: var(var(--primary-color)) !important;
+    button {
+        color: #dedede;
+    }
+}
+.mat-divider {
+    border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+.mat-list-base .mat-list-item .mat-list-text > *,
+.mat-list-base .mat-list-option .mat-list-text > * {
+    color: var(--tertiary-color);
+}
+.mat-list-base .mat-subheader {
+    color: var(--quaternary-color);
+}

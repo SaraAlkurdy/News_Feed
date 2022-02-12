@@ -1,0 +1,65 @@
+<div class="home">
+    <div class="card" *ngFor="let post of posts; let i= index">
+        <div class="d-flex justify-content-between py-3 px-3">
+            <div class="user-data" [routerLink]="['/details',post.id]">
+                <div class="d-flex flex-row align-items-center" >
+                    <img [src]="post.author.image" alt="User Image" width="70" class="rounded-circle">
+                    <div class="d-flex flex-column">
+                        <h5>{{post.author.name}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="post-actions d-flex flex-row align-items-baseline">
+                <small class="mr-2">20 mins</small>
+
+                <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-ellipsis-h"></i></button>
+                
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item class="d-flex align-items-baseline">
+                        <i class="far fa-bookmark px-2"></i>
+                        <p>Save post</p>                                    
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item class="d-flex align-items-baseline">
+                        <i class="fas fa-link px-2"></i>
+                        <p>Copy link to post</p>
+                    </button>
+                </mat-menu>
+
+            </div>
+        </div>
+        <div class="home-post">
+            <div class="home-post-content py-3 px-3">
+                <p [class.show]="post?.show && indexPost == i">{{post.description}}</p>
+                <span (click)="changeStatus(i)" >{{ post?.show ? 'show less': 'show more' }}</span>
+            </div>
+            <div class="home-post-image">
+                <img [src]="post?.image">
+            </div>
+            <div class="home-post-review py-3 px-3">
+                <div class="likes">
+                    <i class="fas fa-thumbs-up"></i>
+                    {{post.likes}}
+                </div>
+                <div class="comments-shares" *ngIf="post?.comments_list?.length">
+                    <span>{{post?.comments_list?.length}} comment</span>
+                </div>
+            </div>
+            <hr>
+            <div class="home-post-actions py-2">
+                <button class="btn">
+                    <i class="fal fa-thumbs-up"></i>
+                    like
+                </button>
+                <button class="btn">
+                    <i class="far fa-comment-dots"></i>
+                    comment
+                </button>
+                <button class="btn">
+                    <i class="far fa-share"></i>
+                    share
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
